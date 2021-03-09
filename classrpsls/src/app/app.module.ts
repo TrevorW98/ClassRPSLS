@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { RoundPageComponent } from './pages/round-page/round-page.component';
+import { EndComponent } from './pages/end/end.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { RoundPageComponent } from './pages/round-page/round-page.component';
     AppComponent,
     MainPageComponent,
     RoundPageComponent,
+    EndComponent,
   ],
   imports: [
     BrowserModule,

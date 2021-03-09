@@ -11,7 +11,7 @@
 .selection {
     background: none;
     border: none;
-    font-size: 120px;
+    font-size: 90px;
     cursor: pointer;
     transition: 100ms;
 }

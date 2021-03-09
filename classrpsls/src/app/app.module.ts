@@ -9,7 +9,7 @@ import { RoundPageComponent } from './pages/round-page/round-page.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RoundPageComponent
+    RoundPageComponent,
   ],
   imports: [
     BrowserModule,

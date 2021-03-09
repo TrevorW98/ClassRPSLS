@@ -1,5 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: #261F34;
+    background-color: #261F34;
     color:#FFF8F8;
+}
+.btn-secondary{
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-size: 23px;
+}
+.btn-secondary:hover{
+    background-color:#707070;
+    color: white;
+}
+.center{
+    display:flex;
+    justify-content: center;
 }

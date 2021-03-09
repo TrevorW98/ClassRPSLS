@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RoundPageComponent } from './pages/round-page/round-page.component';
+import { EndComponent } from './pages/end/end.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoundPageComponent,
+    EndComponent,
   ],
   imports: [
     BrowserModule,

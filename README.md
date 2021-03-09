@@ -1,7 +1,7 @@
 # Seaon 3 ClassRPSLS
 16 student's from Code Stack Academy came together to collaborate this game of the classic Rock, Paper, Scissors, Lizard, & Spock.
 
-Rules:
+# Rules:
 
 The game is an expansion on the game Rock, Paper, Scissors. 
 Each player picks a variable and reveals it at the same time. 

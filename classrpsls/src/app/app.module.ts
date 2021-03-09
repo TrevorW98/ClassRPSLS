@@ -5,11 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { RoundPageComponent } from './pages/round-page/round-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainPageComponent,
+    RoundPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,3 +19,6 @@
 .selection:hover {
     transform: scale(1.2);
 }
+.Round_txt_scaling{
+    font-size: 2rem;
+}

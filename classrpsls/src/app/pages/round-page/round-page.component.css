@@ -6,14 +6,3 @@
     display: flex;
     justify-content: flex-end;
 }
-
-.btn-secondary{
-    border-radius: 15px;
-    background-color: white;
-    color: black;
-    font-size: 23px;
-}
-.btn-secondary:hover{
-    background-color:#707070;
-    color: white;
-}

@@ -1,9 +1,3 @@
-
-@import "~bootstrap/dist/css/bootstrap.css";
-body{
-    background-color: #261F34;
-    color:#FFF8F8;
-}
 .btn-secondary{
     border-radius: 15px;
     background-color: white;
@@ -14,8 +8,14 @@ body{
     background-color:#707070;
     color: white;
 }
-.center{
-    display:flex;
-    justify-content: center;
+.selection {
+    background: none;
+    border: none;
+    font-size: 120px;
+    cursor: pointer;
+    transition: 100ms;
+}
 
+.selection:hover {
+    transform: scale(1.2);
 }

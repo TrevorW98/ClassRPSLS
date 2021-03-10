@@ -11,11 +11,14 @@
 .selection {
     background: none;
     border: none;
-    font-size: 120px;
+    font-size: 90px;
     cursor: pointer;
     transition: 100ms;
 }
 
 .selection:hover {
     transform: scale(1.2);
+}
+.Round_txt_scaling{
+    font-size: 2rem;
 }

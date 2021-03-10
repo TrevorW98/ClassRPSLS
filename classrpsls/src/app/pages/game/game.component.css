@@ -1,0 +1,24 @@
+.btn-secondary{
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-size: 23px;
+}
+.btn-secondary:hover{
+    background-color:#707070;
+    color: white;
+}
+.selection {
+    background: none;
+    border: none;
+    font-size: 90px;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.selection:hover {
+    transform: scale(1.2);
+}
+.Round_txt_scaling{
+    font-size: 2rem;
+}

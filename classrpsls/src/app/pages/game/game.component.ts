@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data-service.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -17,8 +17,7 @@ export class GameComponent implements OnInit {
   player2: string = "default to CPU"
   numPlayers: number = 0;
 
-  constructor(private dService: DataService) { }
-
+  constructor(private dService: DataService, private router: Router) { }
   ngOnInit(): void {
     // this.valueInMain = this.dService.GetValue();
   }
@@ -75,5 +74,12 @@ export class GameComponent implements OnInit {
     // checkRoundsLeft(numRounds, player1pts, player2pts, thresh, playerName);
     this.p1turn = true;
   }
+  
+  goToResults() {
+    this.router.navigate(['results']);
+  };
+  goToMain() {
+    this.router.navigate(['']);
+  };
 
 }

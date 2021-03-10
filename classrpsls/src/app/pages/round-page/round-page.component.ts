@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-round-page',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoundPageComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router: Router) { 
+    
+  }
   ngOnInit(): void {
   }
+  
+  goToGame() {
+    this.router.navigate(['game']);
+  };
+    
+  goToMain() {
+    this.router.navigate(['']);
+  };
 
 }

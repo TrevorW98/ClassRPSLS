@@ -1,4 +1,4 @@
-# Seaon 3 ClassRPSLS
+# Season 3 Class RPSLS
 16 student's from Code Stack Academy came together to collaborate this game of the classic Rock, Paper, Scissors, Lizard, & Spock.
 
 # Rules:

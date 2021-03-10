@@ -22,28 +22,28 @@
             <h2 class="text-light pb-3">Choose your best hand</h2>
         </div>
         <div class="col-2 ">
-            <p class="selection">✊</p>
+            <p class="selection" (click)="playerChoiceSet('rock')">✊</p>
         </div>
         <div class="col-2">
-            <p class="selection">✋</p>
+            <p class="selection" (click)="playerChoiceSet('paper')">✋</p>
         </div>
         <div class="col-2">
-            <p class="selection">✌️</p>
+            <p class="selection" (click)="playerChoiceSet('scissors')">✌️</p>
         </div>
         <div class="col-2">
-            <p class="selection">🤏</p>
+            <p class="selection" (click)="playerChoiceSet('lizard')">🤏</p>
         </div>
         <div class="col-2">
-            <p class="selection">🖖</p>
+            <p class="selection" (click)="playerChoiceSet('spock')">🖖</p>
         </div>
     </div>
 
     <div class="row text-center pt-3 pb-5 mb-2">
         <div class="col-6">
-            <h2 class="text-light">Player 1: (pts)</h2>
+            <h2 class="text-light">Player 1: {{player1pts}}</h2>
         </div>
         <div class="col-6">
-            <h2 class="text-light">(Opponent): (pts)</h2>
+            <h2 class="text-light">{{player2}}: {{player2pts}}</h2>
         </div>
     </div>
     <!--Displays after round has finished-->
@@ -55,7 +55,7 @@
             <h3 class="text-light">Player 1: (Hand name)</h3>
         </div>
         <div class="col-12 pb-5">
-            <h3 class="text-light">(Opponent): (Hand name)</h3>
+            <h3 class="text-light">{{player2}}: (Hand name)</h3>
         </div>
         <div class="col-12">
             <button type="button" class="btn btn-secondary"><b>Next Round</b></button>

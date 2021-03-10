@@ -18,6 +18,7 @@ export class EndComponent implements OnInit {
   goToMain() {
     this.router.navigate(['']);
   };
+  
   goToRounds(){
     this.router.navigate(['rounds']);
   }

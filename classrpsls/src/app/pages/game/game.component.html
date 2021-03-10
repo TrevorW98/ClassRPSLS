@@ -1,10 +1,10 @@
 <div class="container-fluid pt-2 pb-4">
     <div class="row">
         <div class="col-6 d-flex justify-content-start">
-            <button type="button" class="btn btn-secondary"><b>Main Menu</b></button>
+            <button type="button" class="btn btn-secondary" (click)="goToMain()"><b>Main Menu</b></button>
         </div>
         <div class="col-6 d-flex justify-content-end">
-            <h1 class="text-light">1/(Max Rounds)</h1>
+            <h1 class="text-light">{{currentRound}}/{{maxRounds}}</h1>
         </div>
     </div>
 </div>
@@ -12,17 +12,17 @@
 <div class="container-fluid">
     <div class="row text-center">
         <div class="col-12">
-            <h1 class="text-light">Best of (max rounds)</h1>
+            <h1 class="text-light">Best of {{maxRounds}}</h1>
         </div>
         
         
     </div>
-    <div class="row d-flex justify-content-center text-center pb-5">
+    <div *ngIf="!disableBtns" class="row d-flex justify-content-center text-center pb-5">
         <div class="col-12 pb-5 pt-3">
             <h2 class="text-light pb-3">Choose your best hand</h2>
         </div>
         <div class="col-2 ">
-            <p class="selection" (click)="playerChoiceSet('rock')">✊</p>
+            <p class="selection"(click)="playerChoiceSet('rock')">✊</p>
         </div>
         <div class="col-2">
             <p class="selection" (click)="playerChoiceSet('paper')">✋</p>
@@ -47,18 +47,18 @@
         </div>
     </div>
     <!--Displays after round has finished-->
-    <div class="row d-flex justify-content-center text-center">
+    <div  *ngIf=" roundWinner !== '' " class="row d-flex justify-content-center text-center">
         <div class="col-12 pb-5">
-            <h3 class="text-light">(User) Wins</h3>
+            <h3 class="text-light">{{roundWinner}} Wins</h3>
         </div>
         <div class="col-12 pb-5">
-            <h3 class="text-light">Player 1: (Hand name)</h3>
+            <h3 class="text-light">Player 1: {{p1choice}}</h3>
         </div>
         <div class="col-12 pb-5">
-            <h3 class="text-light">{{player2}}: (Hand name)</h3>
+            <h3 class="text-light">{{player2}}: {{p2choice}}</h3>
         </div>
         <div class="col-12">
-            <button type="button" class="btn btn-secondary"><b>Next Round</b></button>
+            <button type="button" class="btn btn-secondary" (click)="nextRound()"><b>Next Round</b></button>
         </div>
     </div>
 </div>

@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 export class DataService {
 
   private url: string = "https://csa2020studentapi.azurewebsites.net/rpsls"
+  private numPlayers: number = 0;
+  private winCondition: number = 0;
 
   constructor(private http: HttpClient) { }
 

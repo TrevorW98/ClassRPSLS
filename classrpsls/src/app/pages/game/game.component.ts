@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data-service.service';
+
 
 @Component({
   selector: 'app-game',
@@ -13,10 +15,12 @@ export class GameComponent implements OnInit {
   player1pts: number = 0;
   player2pts: number = 0;
   player2: string = "default to CPU"
+  numPlayers: number = 0;
 
-  constructor() { }
+  constructor(private dService: DataService) { }
 
   ngOnInit(): void {
+    // this.valueInMain = this.dService.GetValue();
   }
 
 

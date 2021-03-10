@@ -11,7 +11,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { RoundPageComponent } from './pages/round-page/round-page.component';
 import { EndComponent } from './pages/end/end.component';
 
->
+
 
 @NgModule({
   declarations: [

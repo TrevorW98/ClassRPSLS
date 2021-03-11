@@ -3,9 +3,11 @@
         <div class="col-6 d-flex justify-content-start">
             <button type="button" class="btn btn-secondary" (click)="goToMain()"><b>Main Menu</b></button>
         </div>
+
         <div class="col-6 d-flex justify-content-end">
             <h1 class="text-light">{{currentRound}}/{{maxRounds}}</h1>
         </div>
+
     </div>
 </div>
 
@@ -47,6 +49,7 @@
             <h2 class="text-light">{{player2}}: {{player2pts}}</h2>
         </div>
     </div>
+
     <!--Displays after round has finished-->
     <div  *ngIf=" roundWinner !== '' " class="row d-flex justify-content-center text-center">
         <div class="col-12 pb-5">
@@ -63,4 +66,5 @@
         </div>
     </div>
 </div>
+
 

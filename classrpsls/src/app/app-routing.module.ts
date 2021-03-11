@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'rounds', component: RoundPageComponent },
   { path: 'game', component: GameComponent },
   { path: '', component: MainPageComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

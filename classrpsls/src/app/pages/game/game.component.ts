@@ -33,13 +33,11 @@ export class GameComponent implements OnInit {
     this.roundCount = this.dService.getGameType()[1];
     this.winCondition = this.dService.getGameType()[2];
     this.maxRounds = this.roundCount;
-    console.log(this.dService.getGameType());
     this.dService.SetAPIChoice();
   }
 
   //game engine start
-  playerChoiceSet(value: string) {
-    console.log(value);
+  playerChoiceSet(value: string) {;
 
     //first player
     if (this.p1turn) {
@@ -47,9 +45,7 @@ export class GameComponent implements OnInit {
       this.p1turn = false;
       if (this.numPlayers === 1) {
         this.p2choice = this.dService.GetAPIChoice().toLowerCase();
-        console.log(this.p2choice);
         this.compareRound(this.p1choice, this.p2choice)
-        console.log([this.p1choice, this.p2choice])
 
 
       }
@@ -58,8 +54,6 @@ export class GameComponent implements OnInit {
       //PULL FROM API
       //else if 2P
       this.p2choice = value;
-
-      console.log([this.p1choice, this.p2choice])
 
       // method/function to compare
       this.compareRound(this.p1choice, this.p2choice);
@@ -71,7 +65,6 @@ export class GameComponent implements OnInit {
     this.disableBtns = true;
     if (p1 === p2) {
 
-      console.log('draw')
       this.roundWinner = "No one";
     } else {
       if (
@@ -81,12 +74,11 @@ export class GameComponent implements OnInit {
         (p1 === "lizard" && (p2 === "paper" || p2 === "spock")) ||
         (p1 === "spock" && (p2 === "rock" || p2 === "scissors"))
       ) {
-        console.log("p1wins")
+
         this.player1pts++;
 
         this.roundWinner = "P1";
       } else {
-        console.log("p2wins")
         this.player2pts++;
 
         this.roundWinner = this.player2;

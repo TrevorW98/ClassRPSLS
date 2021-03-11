@@ -22,7 +22,10 @@
 
     <div *ngIf="!disableBtns" class="row d-flex justify-content-center text-center pb-5">
         <div class="col-12 pb-5 pt-3">
-            <h2 class="text-light pb-3">Choose your best hand</h2>
+            <!--Against CPU: Choose your best hand-->
+            <!--Against PLayer: {{User playing at the moment}} choose your best hand-->
+
+            <h2 class="text-light pb-3">(Who's playing)</h2>
         </div>
         <div class="col-2 ">
             <p class="selection"(click)="playerChoiceSet('rock')">✊</p>
@@ -51,7 +54,7 @@
     </div>
 
     <!--Displays after round has finished-->
-    <div  *ngIf=" roundWinner !== '' " class="row d-flex justify-content-center text-center">
+    <div  *ngIf="disableBtns" class="row d-flex justify-content-center text-center">
         <div class="col-12 pb-5">
             <h3 class="text-light">{{roundWinner}} Wins</h3>
         </div>
@@ -61,8 +64,8 @@
         <div class="col-12 pb-5">
             <h3 class="text-light">{{player2}}: {{p2choice}}</h3>
         </div>
-        <div class="col-12">
-            <button type="button" class="btn btn-secondary" (click)="nextRound()"><b>Next Round</b></button>
+        <div class="col-12" >
+            <button type="button" class="btn btn-secondary" (click)="nextRound()" ><b>Next Round</b></button>
         </div>
     </div>
 </div>

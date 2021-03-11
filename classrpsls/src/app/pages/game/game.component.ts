@@ -14,7 +14,7 @@ export class GameComponent implements OnInit {
   p2choice: string = "";
   player1pts: number = 0;
   player2pts: number = 0;
-  player2: string = "default to CPU"
+  player2: string = "CPU";
   numPlayers: number = 0;
   winCondition: number = 0;
   roundCount: number = 0;
@@ -29,10 +29,12 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
     // this.valueInMain = this.dService.GetValue();
     this.numPlayers = this.dService.getGameType()[0];
+    this.player2 = this.numPlayers === 1 ? 'CPU' : 'Player 2';
     this.roundCount = this.dService.getGameType()[1];
     this.winCondition = this.dService.getGameType()[2];
     this.maxRounds = this.roundCount;
     console.log(this.dService.getGameType());
+    this.dService.SetAPIChoice();
   }
 
   //game engine start
@@ -44,7 +46,8 @@ export class GameComponent implements OnInit {
       this.p1choice = value;
       this.p1turn = false;
       if (this.numPlayers === 1) {
-        this.p2choice = this.dService.GetAPIChoice().toString();
+        this.p2choice = this.dService.GetAPIChoice().toLowerCase();
+        console.log(this.p2choice);
         this.compareRound(this.p1choice, this.p2choice)
         console.log([this.p1choice, this.p2choice])
 
@@ -59,7 +62,7 @@ export class GameComponent implements OnInit {
       console.log([this.p1choice, this.p2choice])
 
       // method/function to compare
-      this.compareRound(this.p1choice, this.p2choice)
+      this.compareRound(this.p1choice, this.p2choice);
     }
 
   }
@@ -86,7 +89,7 @@ export class GameComponent implements OnInit {
         console.log("p2wins")
         this.player2pts++;
 
-        this.roundWinner = "P2/CPU";
+        this.roundWinner = this.player2;
       }
 
     }
@@ -97,12 +100,11 @@ export class GameComponent implements OnInit {
 
     if (this.roundCount === 0 || this.player1pts === this.winCondition || this.player2pts === this.winCondition) {
       //go to end screen
+      this.dService.setFinalScore(this.player1pts, this.player2pts);
       this.goToResults();
     }
 
-    // reset
-    this.p1choice = "";
-    this.p2choice = "";
+    
     //call a method to check win conditions/rounds
 
   }
@@ -110,6 +112,10 @@ export class GameComponent implements OnInit {
   nextRound() {
     this.roundWinner = "";
     this.disableBtns = false;
+    // reset
+    this.p1choice = "";
+    this.p2choice = "";
+    this.dService.SetAPIChoice();
 
   }
 

@@ -1,10 +1,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <button class="btn btn-secondary">Main Menu</button>
+            <button class="btn btn-secondary" (click)="goToMain()">Main Menu</button>
         </div>
         <div class="col-12 text-center">
-            <h1>Pick Your Opponent</h1>
+            <h1>Pick the number of rounds</h1>
+
         </div>
     </div>
 </div>
@@ -12,18 +13,13 @@
 <div class="container my-5">
     <div class="row">
         <div class="col end">
-            <button class="btn btn-secondary">Best Of 1</button>
+            <button class="btn btn-secondary" (click)="setNumRounds(1)">Best Of 1</button>
         </div>
         <div class="col center">
-            <button class="btn btn-secondary">Best Of 5</button>
+            <button class="btn btn-secondary" (click)="setNumRounds(5)">Best Of 5</button>
         </div>
         <div class="col">
-            <button class="btn btn-secondary">Best Of 7</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12 pt-5 d-flex justify-content-center">
-            <img src="../../../assets/images/file-removebg-preview.png" alt="">
+            <button class="btn btn-secondary" (click)="setNumRounds(7)">Best Of 7</button>
         </div>
     </div>
 </div>

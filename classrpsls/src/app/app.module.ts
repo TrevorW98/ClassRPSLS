@@ -20,7 +20,7 @@ import { EndComponent } from './pages/end/end.component';
     GameComponent,
     MainPageComponent,
     RoundPageComponent,
-    EndComponent,
+    EndComponent
   ],
   imports: [
     BrowserModule,

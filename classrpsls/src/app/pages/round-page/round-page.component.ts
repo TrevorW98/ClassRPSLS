@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data-service.service';
 
 @Component({
   selector: 'app-round-page',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoundPageComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router: Router, private dService: DataService) { 
+    
+  }
   ngOnInit(): void {
+  }
+  
+  goToGame() {
+    this.router.navigate(['game']);
+  };
+    
+  goToMain() {
+    this.router.navigate(['']);
+  };
+
+  setNumRounds(value: number){
+    this.dService.setGameType(value);
+    this.goToGame();
   }
 
 }

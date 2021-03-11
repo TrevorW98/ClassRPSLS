@@ -16,7 +16,5 @@ export class AppComponent {
 
   test(){
     this.dService.GetAPIChoice();
-    // console.log("test")
-    // console.log(this.dService.GetAPIChoice())
   }
 }

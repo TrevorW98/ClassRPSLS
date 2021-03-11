@@ -13,16 +13,21 @@ export class DataService {
   private numPlayers: number = 0;
   private roundCount: number = 1;
   private winCondition: number = 0;
+  private p1FinalScore = 0;
+  private p2FinalScore = 0;
+  private cpuResponse = '';
 
   constructor(private http: HttpClient) { }
 
   GetAPIChoice() {
-    return this.http.get(this.url, { responseType: "text" }).subscribe({next: response => response})
+   return this.cpuResponse;
+  }
 
-    //.get is the ngew .fetch
-    //.subscribe is the ngew .then
+  SetAPIChoice() {
 
-    // return this.http.get(this.url).subscribe()
+    this.http.get(this.url, { responseType: "text" })
+    .subscribe(response => { this.cpuResponse = response});
+
   }
 
   getGameType() {
@@ -39,5 +44,16 @@ export class DataService {
     this.roundCount = 1;
     this.winCondition = 0;
   }
+
+  setFinalScore(p1Score: number, p2Score: number) {
+    this.p1FinalScore = p1Score;
+    this.p2FinalScore = p2Score;
+  }
+
+  getPlayerScore(player: number){
+    return player === 1 ? this.p1FinalScore : this.p2FinalScore;
+  }
+
+
 
 }

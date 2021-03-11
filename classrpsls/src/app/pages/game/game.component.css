@@ -22,3 +22,6 @@
 .Round_txt_scaling{
     font-size: 2rem;
 }
+.Next_Round_Button_Hide{
+    display: none;
+}

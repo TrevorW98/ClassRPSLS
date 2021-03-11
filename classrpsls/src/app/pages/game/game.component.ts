@@ -21,6 +21,7 @@ export class GameComponent implements OnInit {
   maxRounds: number = 0;
   currentRound = 1;
   roundWinner = "";
+  // prompt = ""
 
   disableBtns: boolean = false
 
@@ -34,10 +35,14 @@ export class GameComponent implements OnInit {
     this.winCondition = this.dService.getGameType()[2];
     this.maxRounds = this.roundCount;
     this.dService.SetAPIChoice();
+    // this.prompt = this.numPlayers === 1 ? "Choose your best hand" : "Player 1 Choose";
   }
 
+  
+
   //game engine start
-  playerChoiceSet(value: string) {;
+  playerChoiceSet(value: string) {
+    // this.prompt = this.numPlayers === 1 ? "Choose your best hand" : "Player 1 Choose";
 
     //first player
     if (this.p1turn) {
@@ -49,6 +54,7 @@ export class GameComponent implements OnInit {
 
 
       }
+      // this.prompt = "Player 2 Choose";
     } else {
       //if CPU
       //PULL FROM API
@@ -57,6 +63,7 @@ export class GameComponent implements OnInit {
 
       // method/function to compare
       this.compareRound(this.p1choice, this.p2choice);
+      // this.prompt = "Player 1 Choose";
     }
 
   }
@@ -74,7 +81,6 @@ export class GameComponent implements OnInit {
         (p1 === "lizard" && (p2 === "paper" || p2 === "spock")) ||
         (p1 === "spock" && (p2 === "rock" || p2 === "scissors"))
       ) {
-
         this.player1pts++;
 
         this.roundWinner = "P1";

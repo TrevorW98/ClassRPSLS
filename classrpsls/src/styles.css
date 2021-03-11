@@ -1,8 +1,10 @@
-
+@import "https://fonts.googleapis.com/css2?family=Acme&display=swap";
 @import "~bootstrap/dist/css/bootstrap.css";
+
 body{
     background-color: #261F34;
     color:#FFF8F8;
+    font-family: 'Acme', sans-serif;  
 }
 .btn-secondary{
     border-radius: 15px;

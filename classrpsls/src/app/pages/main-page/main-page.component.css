@@ -2,8 +2,8 @@
     height: 100vh;
     width: 100%;
     background-color: #261F34;
-    color: white;
-    font-family: 'Segoe UI';
+    color: -webkit-linear-gradient( red,orange,yellow,green,blue,indigo,violet);
+    font-family: 'Acme';
 }
 
 .btn{
@@ -14,3 +14,13 @@
     background-color:#707070;
     color: white;
 }
+@font-face{
+    font-family:'Acme';
+    src: url('../../../assets/fonts/Acme/Acme-Regular.ttf');
+}
+.rainbow {
+    font-size: 72px;
+    background: -webkit-linear-gradient(330deg, #ee6262 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

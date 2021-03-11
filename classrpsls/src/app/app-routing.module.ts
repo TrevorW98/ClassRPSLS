@@ -5,7 +5,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { RoundPageComponent } from './pages/round-page/round-page.component';
 
 const routes: Routes = [
-  {path:'', component:GameComponent}
+  { path: '', component: MainPageComponent}
 ];
 
 @NgModule({
